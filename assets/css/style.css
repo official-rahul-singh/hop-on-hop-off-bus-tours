@@ -458,7 +458,7 @@ h6,
   border-color: transparent;
 }
 
-.hoho-btn:hover {
+.hoho-btn:hover,.usefulbox .hoho-btn:hover {
   background: #a90001;
 }
 
@@ -488,8 +488,8 @@ h6,
 [class*="card"] :is(.img-placeholder, .img-placeholder a img) {
   border-radius: 12px;
   height: 100%;
-  width:100%;
   aspect-ratio: 5/3;
+  width: 100%;
 }
 
 .hoho-card,
@@ -1781,6 +1781,10 @@ header ul {
   background: var(--pc);
   border-radius: 5px;
   padding: 30px;
+}
+
+.usefulbox .hoho-btn{
+  background: #930102;
 }
 
 /* Know-Before-You-Go */
