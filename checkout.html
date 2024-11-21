@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signle Page - Hop Off Hop On</title>
+
+  <!--custom style css -->
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <link rel="preload" href="assets/fonts/kaushan-script/kaushan-script-v18-latin-regular.woff2" as="font"
+    type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/kaushan-script/kaushan-script-v18-latin-regular.ttf" as="font" type="font/ttf"
+    crossorigin />
+
+  <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-regular.woff2" as="font" type="font/woff2"
+    crossorigin />
+  <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-regular.ttf" as="font" type="font/ttf" crossorigin />
+
+  <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-500.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-500.ttf" as="font" type="font/ttf" crossorigin />
+
+  <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-600.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-600.ttf" as="font" type="font/ttf" crossorigin />
+
+  <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-700.ttf" as="font" type="font/ttf" crossorigin />
+
+  <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-800.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-800.ttf" as="font" type="font/ttf" crossorigin />
+
+
+  <style>
+    @font-face {
+      font-display: swap;
+      font-family: 'Kaushan Script';
+      font-style: normal;
+      font-weight: 400;
+      src: url('assets/fonts/kaushan-script/kaushan-script-v18-latin-regular.woff2') format('woff2'),
+        url('assets/fonts/kaushan-script/kaushan-script-v18-latin-regular.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-display: swap;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 400;
+      src: url('assets/fonts/poppins/poppins-v21-latin-regular.woff2') format('woff2'),
+        url('assets/fonts/poppins/poppins-v21-latin-regular.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-display: swap;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 500;
+      src: url('assets/fonts/poppins/poppins-v21-latin-500.woff2') format('woff2'),
+        url('assets/fonts/poppins/poppins-v21-latin-500.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-display: swap;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      src: url('assets/fonts/poppins/poppins-v21-latin-600.woff2') format('woff2'),
+        url('assets/fonts/poppins/poppins-v21-latin-600.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-display: swap;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 700;
+      src: url('assets/fonts/poppins/poppins-v21-latin-700.woff2') format('woff2'),
+        url('assets/fonts/poppins/poppins-v21-latin-700.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-display: swap;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 800;
+      src: url('assets/fonts/poppins/poppins-v21-latin-800.woff2') format('woff2'),
+        url('assets/fonts/poppins/poppins-v21-latin-800.ttf') format('truetype');
+    }
+  </style>
+
+</head>
+
+<body class="bg-light">
+
+   <!--  Navigation ============ Start =====  -->
+   <header>
+    <div class="container">
+        <a href="index.html" class="mg-logo">
+            <img src="assets/images/logo.svg" alt="managetrix-logo" class="img-fluid" />
+        </a>
+        <div class="menu-container">
+            <nav class="leftmenu">
+                <ul>
+                    <li class="d-block d-lg-none"><a href="login.html">Login</a></li>
+                    <li><a href="about-us.html">About us</a></li>
+
+                    <li class="dropdown">
+                        <a href="#">Our Destinations</a>
+                        <ul>
+                            <li><a href="faq.html">faq</a></li>
+                            <li><a href="country.html">Country</a></li>
+                            <li><a href="review.html">review</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="tour-single.html">Tour single Page</a></li>
+                            <li><a href="feedback-form.html">Feedback form</a></li>
+                            <li><a href="confirmation.html">confirmation</a></li>
+                            <li><a href="term-condition.html">Term Condition</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact us</a></li>
+
+                    <svg class="cancel-btn" fill="#000" xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 384 512">
+                        <path
+                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                        ></path>
+                    </svg>
+                </ul>
+            </nav>
+
+            <ul class="rightmenu">
+                <li class="dropdown hoho-btn account">
+                    <a href="#" class="d-flex align-items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" width="20" height="20" fill="#fff">
+                            <path
+                                d="M11.689 11.256a3.75 3.75 0 0 0-3.252-1.881H6.562a3.75 3.75 0 0 0-3.252 1.881c1.031 1.149 2.526 1.869 4.189 1.869s3.158-.723 4.189-1.869M0 7.5a7.5 7.5 0 1 1 15 0 7.5 7.5 0 1 1-15 0m7.5.469a2.109 2.109 0 1 0 0-4.219 2.109 2.109 0 1 0 0 4.219"
+                            ></path>
+                        </svg>
+                        <span class="d-lg-block d-none">Login or Create Account</span>
+                    </a>
+                    <ul>
+                        <li><a class="dropdown-item" href="login.html">login</a></li>
+                        <li><a class="dropdown-item" href="register.html">Register</a></li>
+                        <li><a class="dropdown-item" href="forgot-password.html">Forgot Password</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown hoho-btn">
+                    <a href="#">INR (₹)</a>
+                    <ul>
+                        <li><a href="#">CAD ($)</a></li>
+                        <li><a href="#">CAD ($)</a></li>
+                        <li><a href="#">CAD ($)</a></li>
+                        <li><a href="#">CAD ($)</a></li>
+                    </ul>
+                </li>
+                <li class="cart" id="cart-btn">
+                    <a href="javascript:void(0)">
+                        <img src="assets/images/cart.svg" alt="cart-img" />
+                        <span class="position-absolute start-lg-100 text-white ratio ratio-1x text-center translate-middle p-2 bg-theme rounded-circle">
+                            10
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <div class="menu-toggle-btn">
+                <svg fill="#000" width="20" height="20" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM64 256c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                    ></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- cart offcanvas menu -->
+<div class="offcanvas">
+    <div class="offcanvas-header">
+        <div class="d-flex align-items-center justify-content-between">
+            <div class="h6 mb-0">Cart (2 items)</div>
+            <svg class="cancel-canvas-btn" fill="#000" xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 384 512">
+                <path
+                    d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                ></path>
+            </svg>
+        </div>
+    </div>
+
+    <div class="offcanvas-body hoho-scroll">
+        <div class="cart-item-list">
+            <div class="row store-item bottom-line">
+                <div class="col-12 mb-4 gap-3 d-flex align-items-center justify-content-between">
+                    <a href="#"><img class="image-store col-5" src="assets/images/767.webp" alt="Blue Hoodie" /></a>
+
+                    <a href="#" class="h6 mb-0 col-7">TooTBus: Paris Hop-On, Hop-Off Bus Tour Ca ital of Games</a>
+                </div>
+                <div class="col-4 list-store mb-2">
+                    <p>Adult (+ 16)</p>
+                    <div class="btn-quantity-container d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn-quantity btn btn-default">−</button>
+                        <span class="p-quantity">0</span>
+                        <button type="button" class="btn-quantity btn btn-default">+</button>
+                    </div>
+                </div>
+                <div class="col-4 list-store mb-2">
+                    <p>Child (5 -15)</p>
+                    <div class="btn-quantity-container d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn-quantity btn btn-default">−</button>
+                        <span class="p-quantity">0</span>
+                        <button type="button" class="btn-quantity btn btn-default">+</button>
+                    </div>
+                </div>
+                <div class="col-4 list-store mb-2">
+                    <p>Infant (0-4)</p>
+                    <div class="btn-quantity-container d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn-quantity btn btn-default">−</button>
+                        <span class="p-quantity">0</span>
+                        <button type="button" class="btn-quantity btn btn-default">+</button>
+                    </div>
+                </div>
+                <div class="col-12 mt-2 list-store d-flex align-items-center justify-content-between">
+                    <button type="button" class="btn btn-sm remove">Remove Item</button>
+                    <div class="fs-6 fw-bold">₹45,646</div>
+                </div>
+            </div>
+            <div class="row mt-2 store-item bottom-line pb-3">
+                <div class="col-12 mb-4 gap-3 d-flex align-items-center justify-content-between">
+                    <a href="#"><img class="image-store col-5" src="assets/images/776.webp" alt="Blue Hoodie" /></a>
+
+                    <a href="#" class="h6 mb-0 col-7">TooTBus: Paris Hop-On, Hop-Off Bus Tour Ca ital of Games</a>
+                </div>
+                <div class="col-4 list-store mb-2">
+                    <p>Adult (+ 16)</p>
+                    <div class="btn-quantity-container d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn-quantity btn btn-default">−</button>
+                        <span class="p-quantity">0</span>
+                        <button type="button" class="btn-quantity btn btn-default">+</button>
+                    </div>
+                </div>
+                <div class="col-4 list-store mb-2">
+                    <p>Child (5 -15)</p>
+                    <div class="btn-quantity-container d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn-quantity btn btn-default">−</button>
+                        <span class="p-quantity">0</span>
+                        <button type="button" class="btn-quantity btn btn-default">+</button>
+                    </div>
+                </div>
+                <div class="col-4 list-store mb-2">
+                    <p>Infant (0-4)</p>
+                    <div class="btn-quantity-container d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn-quantity btn btn-default">−</button>
+                        <span class="p-quantity">0</span>
+                        <button type="button" class="btn-quantity btn btn-default">+</button>
+                    </div>
+                </div>
+                <div class="col-12 mt-2 list-store d-flex align-items-center justify-content-between">
+                    <button type="button" class="btn btn-sm remove">Remove Item</button>
+                    <div class="fs-6 fw-bold">₹45,646</div>
+                </div>
+            </div>
+            <div class="row mt-2 store-item bottom-line pb-3">
+                <div class="col-12 mb-4 gap-3 d-flex align-items-center justify-content-between">
+                    <a href="#"><img class="image-store col-5" src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/e2/fe/13.jpg" alt="Blue Hoodie" /></a>
+
+                    <a href="#" class="h6 mb-0 col-7">TooTBus: Paris Hop-On, Hop-Off Bus Tour Ca ital of Games</a>
+                </div>
+                <div class="col-4 list-store mb-2">
+                    <p>Adult (+ 16)</p>
+                    <div class="btn-quantity-container d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn-quantity btn btn-default">−</button>
+                        <span class="p-quantity">0</span>
+                        <button type="button" class="btn-quantity btn btn-default">+</button>
+                    </div>
+                </div>
+                <div class="col-4 list-store mb-2">
+                    <p>Child (5 -15)</p>
+                    <div class="btn-quantity-container d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn-quantity btn btn-default">−</button>
+                        <span class="p-quantity">0</span>
+                        <button type="button" class="btn-quantity btn btn-default">+</button>
+                    </div>
+                </div>
+                <div class="col-4 list-store mb-2">
+                    <p>Infant (0-4)</p>
+                    <div class="btn-quantity-container d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn-quantity btn btn-default">−</button>
+                        <span class="p-quantity">0</span>
+                        <button type="button" class="btn-quantity btn btn-default">+</button>
+                    </div>
+                </div>
+                <div class="col-12 mt-2 list-store d-flex align-items-center justify-content-between">
+                    <button type="button" class="btn btn-sm remove">Remove Item</button>
+                    <div class="fs-6 fw-bold">₹45,646</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas-footer">
+        <div class="list-store d-flex align-items-center justify-content-between">
+            <a href="checkout.html" class="hoho-btn">Checkout</a>
+            <div class="fs-5 fw-bold">₹45,646</div>
+        </div>
+    </div>
+</div>
+
+  <main class="tour-single-page bg-white pb-70">
+
+    <div class="page-header bg-white">
+      <div class="container">
+        <!-- Breadcrums -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+          </ol>
+        </nav>
+        <div class="h2 text-muted">Checkout</div>
+        <div class="d-flex align-items-center gap-5">
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row gy-4 column-reverse flex-sm-column">
+        <div class="col-lg-7">
+          <div class="checkout-form check-availabilty-form">
+            <form action="" class="">
+              <h3 class="mb-2">Passenger's Details</h3>
+              <p>We'll use this information to send you confirmation and updates about your booking</p>
+              <div class="line-seperator"></div>
+              <div class="row gy-3">
+                <div class="col-lg-6">
+
+                  <label for="" class="mb-1">First Name</label>
+                  <input type="text" class="form-control" id="f-fname">
+
+                </div>
+                <div class="col-lg-6">
+
+                  <label for="" class="mb-1">Last Name</label>
+                  <input type="text" class="form-control" id="f-lname">
+
+                </div>
+                <div class="col-12">
+                  <label for="" class="mb-1">Email Id</label>
+                  <input type="email" class="form-control">
+
+                </div>
+                <div class="col-12 mb-3">
+                  <label for="" class="mb-1">Phone No.</label>
+                  <div class="row gy-3">
+                    <div class="col-lg-6">
+                      <select name="bookerPhoneNumber_countryCodePrefix" class="form-select">
+                        <option value="AU">(+61) Australia</option>
+                        <option value="CA">(+1) Canada</option>
+                        <option value="FR">(+33) France</option>
+                        <option value="DE">(+49) Germany</option>
+                        <option value="IE">(+353) Ireland</option>
+                        <option value="IT">(+39) Italy</option>
+                        <option value="NL">(+31) Netherlands</option>
+                        <option value="NZ">(+64) New Zealand</option>
+                        <option value="GB">(+44) United Kingdom</option>
+                        <option value="US">(+1) United States of America</option>
+                        <option value="disabled" disabled="">---</option>
+                        <option value="AF">(+93) Afghanistan</option>
+                        <option value="AX">(+358) Aland Islands</option>
+                        <option value="AL">(+355) Albania</option>
+                        <option value="DZ">(+213) Algeria</option>
+                        <option value="AS">(+1-684) American Samoa</option>
+                        <option value="AD">(+376) Andorra</option>
+                        <option value="AO">(+244) Angola</option>
+                        <option value="AI">(+1-264) Anguilla</option>
+                        <option value="AQ">(+672) Antarctica</option>
+                        <option value="AG">(+1-268) Antigua and Barbuda</option>
+                        <option value="AR">(+54) Argentina</option>
+                        <option value="AM">(+374) Armenia</option>
+                        <option value="AW">(+297) Aruba</option>
+                        <option value="AU">(+61) Australia</option>
+                        <option value="AT">(+43) Austria</option>
+                        <option value="AZ">(+994) Azerbaijan</option>
+                        <option value="BS">(+1-242) Bahamas</option>
+                        <option value="BH">(+973) Bahrain</option>
+                        <option value="BD">(+880) Bangladesh</option>
+                        <option value="BB">(+1-246) Barbados</option>
+                        <option value="BY">(+375) Belarus</option>
+                        <option value="BE">(+32) Belgium</option>
+                        <option value="BZ">(+501) Belize</option>
+                        <option value="BJ">(+229) Benin</option>
+                        <option value="BM">(+1-441) Bermuda</option>
+                        <option value="BT">(+975) Bhutan</option>
+                        <option value="BO">(+591) Bolivia</option>
+                        <option value="BQ">(+599) Bonaire</option>
+                        <option value="BA">(+387) Bosnia and Herzegovina</option>
+                        <option value="BW">(+267) Botswana</option>
+                        <option value="BV">(+55) Bouvet Island</option>
+                        <option value="BR">(+55) Brazil</option>
+                        <option value="IO">(+246) British Indian Ocean Territory</option>
+                        <option value="BN">(+673) Brunei Darussalam</option>
+                        <option value="BG">(+359) Bulgaria</option>
+                        <option value="BF">(+226) Burkina Faso</option>
+                        <option value="BI">(+257) Burundi</option>
+                        <option value="CV">(+238) Cabo Verde</option>
+                        <option value="KH">(+855) Cambodia</option>
+                        <option value="CM">(+237) Cameroon</option>
+                        <option value="CA">(+1) Canada</option>
+                        <option value="KY">(+1-345) Cayman Islands</option>
+                        <option value="CF">(+236) Central African Republic</option>
+                        <option value="TD">(+235) Chad</option>
+                        <option value="CL">(+56) Chile</option>
+                        <option value="CN">(+86) China</option>
+                        <option value="CX">(+61) Christmas Island</option>
+                        <option value="CC">(+61) Cocos (Keeling) Islands</option>
+                        <option value="CO">(+57) Colombia</option>
+                        <option value="KM">(+269) Comoros</option>
+                        <option value="CK">(+682) Cook Islands</option>
+                        <option value="CR">(+506) Costa Rica</option>
+                        <option value="CI">(+225) Cote d'Ivoire</option>
+                        <option value="HR">(+385) Croatia</option>
+                        <option value="CW">(+599) Curacao</option>
+                        <option value="CY">(+357) Cyprus</option>
+                        <option value="CZ">(+420) Czechia</option>
+                        <option value="DK">(+45) Denmark</option>
+                        <option value="DJ">(+253) Djibouti</option>
+                        <option value="DM">(+1-767) Dominica</option>
+                        <option value="DO">(+1-809) Dominican Republic</option>
+                        <option value="EC">(+593) Ecuador</option>
+                        <option value="EG">(+20) Egypt</option>
+                        <option value="SV">(+503) El Salvador</option>
+                        <option value="GQ">(+240) Equatorial Guinea</option>
+                        <option value="ER">(+291) Eritrea</option>
+                        <option value="EE">(+372) Estonia</option>
+                        <option value="ET">(+251) Ethiopia</option>
+                        <option value="FK">(+500) Falkland Islands</option>
+                        <option value="FO">(+298) Faroe Islands</option>
+                        <option value="FJ">(+679) Fiji</option>
+                        <option value="FI">(+358) Finland</option>
+                        <option value="FR">(+33) France</option>
+                        <option value="GF">(+594) French Guiana</option>
+                        <option value="PF">(+689) French Polynesia</option>
+                        <option value="TF">(+262) French Southern Territories and Antarctic
+                          Lands</option>
+                        <option value="GA">(+241) Gabon</option>
+                        <option value="GM">(+220) Gambia</option>
+                        <option value="GE">(+995) Georgia</option>
+                        <option value="DE">(+49) Germany</option>
+                        <option value="GH">(+233) Ghana</option>
+                        <option value="GI">(+350) Gibraltar</option>
+                        <option value="GR">(+30) Greece</option>
+                        <option value="GL">(+299) Greenland</option>
+                        <option value="GD">(+1-473) Grenada</option>
+                        <option value="GP">(+590) Guadeloupe</option>
+                        <option value="GU">(+1-671) Guam</option>
+                        <option value="GT">(+502) Guatemala</option>
+                        <option value="GG">(+44-1481) Guernsey</option>
+                        <option value="GN">(+224) Guinea</option>
+                        <option value="GW">(+245) Guinea-Bissau</option>
+                        <option value="GY">(+592) Guyana</option>
+                        <option value="HT">(+509) Haiti</option>
+                        <option value="HM">(+61) Heard Island and McDonald Islands</option>
+                        <option value="VA">(+379) Holy See (Vatican City State)</option>
+                        <option value="HN">(+504) Honduras</option>
+                        <option value="HK">(+852) Hong Kong</option>
+                        <option value="HU">(+36) Hungary</option>
+                        <option value="IS">(+354) Iceland</option>
+                        <option value="IN">(+91) India</option>
+                        <option value="ID">(+62) Indonesia</option>
+                        <option value="IE">(+353) Ireland</option>
+                        <option value="IM">(+44-1624) Isle of Man</option>
+                        <option value="IL">(+972) Israel</option>
+                        <option value="IT">(+39) Italy</option>
+                        <option value="JM">(+1-876) Jamaica</option>
+                        <option value="JP">(+81) Japan</option>
+                        <option value="JE">(+44-1534) Jersey</option>
+                        <option value="JO">(+962) Jordan</option>
+                        <option value="KZ">(+7) Kazakhstan</option>
+                        <option value="KE">(+254) Kenya</option>
+                        <option value="KI">(+686) Kiribati</option>
+                        <option value="KW">(+965) Kuwait</option>
+                        <option value="KG">(+996) Kyrgyzstan</option>
+                        <option value="LA">(+856) Lao People's Democratic Republic</option>
+                        <option value="LV">(+371) Latvia</option>
+                        <option value="LB">(+961) Lebanon</option>
+                        <option value="LS">(+266) Lesotho</option>
+                        <option value="LR">(+231) Liberia</option>
+                        <option value="LY">(+218) Libya</option>
+                        <option value="LI">(+423) Liechtenstein</option>
+                        <option value="LT">(+370) Lithuania</option>
+                        <option value="LU">(+352) Luxembourg</option>
+                        <option value="MO">(+853) Macao</option>
+                        <option value="MK">(+389) Macedonia</option>
+                        <option value="MG">(+261) Madagascar</option>
+                        <option value="MW">(+265) Malawi</option>
+                        <option value="MY">(+60) Malaysia</option>
+                        <option value="MV">(+960) Maldives</option>
+                        <option value="ML">(+223) Mali</option>
+                        <option value="MT">(+356) Malta</option>
+                        <option value="MQ">(+596) Martinique</option>
+                        <option value="MR">(+222) Mauritania</option>
+                        <option value="MU">(+230) Mauritius</option>
+                        <option value="YT">(+269) Mayotte</option>
+                        <option value="MX">(+52) Mexico</option>
+                        <option value="FM">(+691) Micronesia</option>
+                        <option value="MD">(+373) Moldova</option>
+                        <option value="MC">(+377) Monaco</option>
+                        <option value="MN">(+976) Mongolia</option>
+                        <option value="ME">(+382) Montenegro</option>
+                        <option value="MS">(+1-664) Montserrat</option>
+                        <option value="MA">(+212) Morocco</option>
+                        <option value="MZ">(+258) Mozambique</option>
+                        <option value="MM">(+95) Myanmar</option>
+                        <option value="NA">(+264) Namibia</option>
+                        <option value="NR">(+674) Nauru</option>
+                        <option value="NP">(+977) Nepal</option>
+                        <option value="NL">(+31) Netherlands</option>
+                        <option value="AN">(+599) Netherlands Antilles</option>
+                        <option value="NC">(+687) New Caledonia</option>
+                        <option value="NZ">(+64) New Zealand</option>
+                        <option value="NI">(+505) Nicaragua</option>
+                        <option value="NE">(+227) Niger</option>
+                        <option value="NG">(+234) Nigeria</option>
+                        <option value="NU">(+683) Niue</option>
+                        <option value="NF">(+672) Norfolk Island</option>
+                        <option value="MP">(+1-670) Northern Mariana Islands</option>
+                        <option value="NO">(+47) Norway</option>
+                        <option value="OM">(+968) Oman</option>
+                        <option value="PK">(+92) Pakistan</option>
+                        <option value="PW">(+680) Palau</option>
+                        <option value="PS">(+970) Palestine, State of</option>
+                        <option value="PA">(+507) Panama</option>
+                        <option value="PG">(+675) Papua New Guinea</option>
+                        <option value="PY">(+595) Paraguay</option>
+                        <option value="PE">(+51) Peru</option>
+                        <option value="PH">(+63) Philippines</option>
+                        <option value="PN">(+64) Pitcairn</option>
+                        <option value="PL">(+48) Poland</option>
+                        <option value="PT">(+351) Portugal</option>
+                        <option value="PR">(+1) Puerto Rico</option>
+                        <option value="QA">(+974) Qatar</option>
+                        <option value="RE">(+262) Reunion</option>
+                        <option value="RO">(+40) Romania</option>
+                        <option value="RU">(+7) Russian Federation</option>
+                        <option value="RW">(+250) Rwanda</option>
+                        <option value="SH">(+290) Saint Helena</option>
+                        <option value="KN">(+1-869) Saint Kitts and Nevis</option>
+                        <option value="LC">(+1-758) Saint Lucia</option>
+                        <option value="MF">(+590) Saint Martin</option>
+                        <option value="PM">(+508) Saint Pierre and Miquelon</option>
+                        <option value="WS">(+685) Samoa</option>
+                        <option value="SM">(+378) San Marino</option>
+                        <option value="ST">(+239) Sao Tome and Principe</option>
+                        <option value="SA">(+966) Saudi Arabia</option>
+                        <option value="SN">(+221) Senegal</option>
+                        <option value="RS">(+381) Serbia</option>
+                        <option value="YU">(+381) Serbia and Montenegro</option>
+                        <option value="SC">(+248) Seychelles</option>
+                        <option value="SL">(+232) Sierra Leone</option>
+                        <option value="SG">(+65) Singapore</option>
+                        <option value="SX">(+1721) Sint Maarten</option>
+                        <option value="SK">(+421) Slovakia</option>
+                        <option value="SI">(+386) Slovenia</option>
+                        <option value="SB">(+677) Solomon Islands</option>
+                        <option value="SO">(+252) Somalia</option>
+                        <option value="ZA">(+27) South Africa</option>
+                        <option value="KR">(+82) South Korea</option>
+                        <option value="ES">(+34) Spain</option>
+                        <option value="LK">(+94) Sri Lanka</option>
+                        <option value="VC">(+1-784) St Vincent and Grenadines</option>
+                        <option value="SR">(+597) Suriname</option>
+                        <option value="SZ">(+268) Swaziland</option>
+                        <option value="SE">(+46) Sweden</option>
+                        <option value="CH">(+41) Switzerland</option>
+                        <option value="TW">(+886) Taiwan</option>
+                        <option value="TJ">(+992) Tajikistan</option>
+                        <option value="TZ">(+255) Tanzania, United Republic of</option>
+                        <option value="TH">(+66) Thailand</option>
+                        <option value="TL">(+670) Timor-Leste</option>
+                        <option value="TG">(+228) Togo</option>
+                        <option value="TK">(+690) Tokelau</option>
+                        <option value="TO">(+676) Tonga</option>
+                        <option value="TT">(+1-868) Trinidad and Tobago</option>
+                        <option value="TN">(+216) Tunisia</option>
+                        <option value="TR">(+90) Turkey</option>
+                        <option value="TM">(+993) Turkmenistan</option>
+                        <option value="TC">(+1-649) Turks and Caicos Islands</option>
+                        <option value="TV">(+688) Tuvalu</option>
+                        <option value="UG">(+256) Uganda</option>
+                        <option value="UA">(+380) Ukraine</option>
+                        <option value="AE">(+971) United Arab Emirates</option>
+                        <option value="GB">(+44) United Kingdom</option>
+                        <option value="UM">(+1) United States Minor Outlying Islands</option>
+                        <option value="US">(+1) United States of America</option>
+                        <option value="UY">(+598) Uruguay</option>
+                        <option value="UZ">(+998) Uzbekistan</option>
+                        <option value="VU">(+678) Vanuatu</option>
+                        <option value="VE">(+58) Venezuela</option>
+                        <option value="VN">(+84) Viet Nam</option>
+                        <option value="VG">(+1-284) Virgin Islands (British)</option>
+                        <option value="VI">(+1-340) Virgin Islands (U.S.)</option>
+                        <option value="WF">(+681) Wallis and Futuna</option>
+                        <option value="YE">(+967) Yemen</option>
+                        <option value="ZM">(+260) Zambia</option>
+                        <option value="ZW">(+263) Zimbabwe</option>
+                      </select>
+                    </div>
+                    <div class="col-lg-6">
+                      <input type="text" name="f-book" class="form-control" placeholder="1234567890">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex gap-3 terms-cond">
+                    <input type="checkbox" id="agree_checkbox" style="width: 20px;height: 20px;">
+                    <div class="col-10 p-0"> I understand and agree to the website's <a href="terms-and-conditions"
+                        style="color:#0275d8" target="_blank">terms &amp; conditions</a> and <a style="color:#0275d8"
+                        href="privacy-policy" target="_blank">Privacy Policy</a> of Sightseeingo.</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="hoho-btn d-flex align-items-center gap-2">Pay With Credit/Debit card<svg
+                      width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M.901 2.135v-.817c0-.347.28-.627.625-.625L8.683.692c.346 0 .625.28.624.624v7.159a.623.623 0 0 1-.625.625h-.817a.625.625 0 0 1-.625-.639l.105-4.333L2.053 9.42a.625.625 0 0 1-.884 0L.58 8.832a.625.625 0 0 1 0-.883l5.292-5.293-4.333.105A.62.62 0 0 1 .9 2.137"
+                        fill="#fff"></path>
+                    </svg></button>
+
+                </div>
+              </div>
+
+
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="check-availabilty-form mb-4 mb-md-0">
+            <div class="d-flex gap-3 mb-3">
+              <div class="tour-img">
+                <img src="assets/images/update-img/image3.jpg"
+                  class="img-fluid" alt="">
+              </div>
+              <div class="tour-details">
+                <div class="text-10 gap-2 d-flex align-items-center"><svg xmlns="http://www.w3.org/2000/svg"
+                    fill="#da1010" viewBox="0 0 10 13.334" width="10" height="13.334">
+                    <path
+                      d="M5.617 13C6.953 11.328 10 7.276 10 5A5 5 0 0 0 0 5c0 2.276 3.047 6.328 4.383 8a.786.786 0 0 0 1.234 0M5 3.334a1.666 1.666 0 1 1 0 3.334 1.666 1.666 0 1 1 0-3.334" />
+                  </svg>Paris, France</div>
+                <span class="text-dark fw-bolder">Rome: Colosseum, Roman Forum, and Palatine Hill Guided Tour.</span>
+              </div>
+            </div>
+
+            <ul class="list-unstyled iconList__be_B">
+              <li><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="icon__UJ21">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M8 2a2.75 2.75 0 100 5.5A2.75 2.75 0 008 2zM6.25 4.75a1.75 1.75 0 113.5 0 1.75 1.75 0 01-3.5 0zM8 8.5c-2.76 0-5 2.17-5 5 0 .28.22.5.5.5h9a.5.5 0 00.5-.5c0-2.83-2.24-5-5-5zm0 1a3.96 3.96 0 013.97 3.5H4.03A3.96 3.96 0 018 9.5z">
+                  </path>
+                </svg><span data-automation="right-hand-rail-passenger-details">2 Adults</span></li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="icon__UJ21">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M5.5 1c.28 0 .5.22.5.5V2h4v-.5a.5.5 0 011 0V2h1.25c.97 0 1.75.78 1.75 1.75v8.5c0 .97-.78 1.75-1.75 1.75h-8.5C2.78 14 2 13.22 2 12.25v-8.5C2 2.78 2.78 2 3.75 2H5v-.5c0-.28.22-.5.5-.5zM10 3v.5a.5.5 0 001 0V3h1.25c.41 0 .75.34.75.75V5H3V3.75c0-.41.34-.75.75-.75H5v.5a.5.5 0 001 0V3h4zM3 6v6.25c0 .41.34.75.75.75h8.5c.41 0 .75-.34.75-.75V6H3z">
+                  </path>
+                </svg><span class="date__MJ9s" data-automation="right-hand-rail-travel-date">Thu, Oct 31,
+                  2024</span><span class="preserveWhitespace__eS6C"> • </span><span
+                  data-automation="right-hand-rail-start-time">9:30 AM</span></li>
+            </ul>
+
+            <!-- price field -->
+            <div class="d-flex justify-content-between">
+              <span class="fs-5 text-dark fw-bold">Total price: </span> <span
+                class="fs-5 text-dark fw-bold">₹4,165.50</span>
+            </div>
+            <p class="discountedPricing">
+              <span class="originalPrice">₹4,384.74</span>
+              <span class="discountedPrice">
+                Save <span>₹219.24</span>
+              </span>
+            </p>
+            <div class="lowest-price-guarantee text-dark mb-3">Lowest Price Guarantee*</div>
+            <!-- price field -->
+
+            <div class="alert alert-success d-flex mb-3 p-2" role="alert">
+              <svg width="18" height="18" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                class="flex-shrink-0 mt-1 me-2" fill="#008768">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M2 10a8 8 0 1116 0 8 8 0 01-16 0zm11.35-1.65a.5.5 0 00-.7-.7L9 11.29 7.35 9.65a.5.5 0 10-.7.7l2 2c.2.2.5.2.7 0l4-4z">
+                </path>
+              </svg>
+              <small class="discountedPricing mb-0">
+                <a href="#" class="me-1 text-dark fw-bold"> Free cancellation</a>up to 24 hours before
+                the experience starts (local time)
+              </small>
+            </div>
+            <div class="d-flex gap-2 btn-group">
+              <a href="" class="btn btn-danger">Edit</a>
+              <a href="" class="btn btn-warning">Remove</a>
+              <a href="" class="btn btn-primary">Add More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+  </main>
+
+
+  <!-- footer Start -->
+  <footer>
+    <div class="container">
+        <div class="row row-gap">
+            <div class="col-lg-3 col-md-6">
+                <div class="h5">Top Bus Tours</div>
+                <ul class="list-unstyled">
+                    <li> <a href="#">Athens Hop On Hop Off</a></li>
+                    <li> <a href="#">Madrid Hop On Hop Off</a></li>
+                    <li> <a href="#">Barcelona Hop On Hop Off</a></li>
+                    <li> <a href="#">London Hop On Hop Off</a></li>
+                    <li> <a href="#">Paris Hop On Hop Off</a></li>
+                    <li> <a href="#">Vienna Hop On Hop Off</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="h5">Our Company</div>
+                <ul class="list-unstyled">
+                    <li> <a href="about-us.html">About Us</a></li>
+                    <li> <a href="blog.html">Blog</a></li>
+                    <li> <a href="#">Privacy Policy</a></li>
+                    <li> <a href="term-condition.html">Terms and Conditions</a></li>
+                    <li> <a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="h5">Support</div>
+                <ul class="list-unstyled">
+                    <li> <a href="contact.html">Contact Us</a></li>
+                    <li> <a href="faq.html">Frequently Asked Questions</a></li>
+                    <li> <a href="#">Privacy Policy</a></li>
+                    <li> <a href="term-condition.html">Terms of Use</a></li>
+                    <li> <a href="review.html">Review</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <a href="#" class="d-flex align-items-center mb-4">
+                    <div class="img">
+                        <img src="assets/images/live.svg" alt="">
+                    </div>
+                    <div class="content ms-3">
+                        <span class="d-block text-dark">Live Support?</span>
+                        <strong class="d-block text-dark">Live Chat</strong>
+                    </div>
+
+                </a>
+
+                <span class="d-block">E-mail support?</span>
+                <a href="mailto:support@sightseeingo.com" class="text-dark fw-bold">support@sightseeingo.com</a>
+            </div>
+            <div class="col-lg-3 col-md-12 text-lg-start  text-center">
+                <a class="footer-logo" href="#">
+                    <img src="assets/images/logo.svg" alt="Hop off Hop On logo" class="img-fluid ">
+                </a>
+            </div>
+
+            <div class="col-lg-9 col-md-12">
+                <div class="footer-form rounded d-lg-flex justify-content-betwwen align-items-center">
+                    <span class="d-block mb-lg-0 mb-3 fw-bold fs-5">SUBSCRIBE FOR UPDATES &amp; LATEST OFFERS</span>
+                    <form action="#" class="d-flex ps-3 ms-lg-auto">
+                        <input type="text" placeholder="Your Email" class="border-0 form-control w-100">
+                        <button class="btn hoho-btn ms-auto rounded">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+  <div class="copywrite text-center py-3">
+    &copy; 2024 Hop On Hop Off Bus Tours. All rights reserved.
+  </div>
+  <!-- footer End -->
+
+  <button title="back to top button" id="scroll_to_top" class="">
+    <svg width="16" fill="#fff" viewBox="0 -4.5 20 20" xmlns="http://www.w3.org/2000/svg">
+      <g stroke-width="0"></g>
+      <g stroke-linecap="round" stroke-linejoin="round"></g>
+      <path
+        d="M19.708 10.634c.39-.405.39-1.06 0-1.464L11.444.607a1.95 1.95 0 0 0-2.827 0L.292 9.232c-.385.4-.39 1.048-.01 1.454a.976.976 0 0 0 1.425.01l7.617-7.893a.975.975 0 0 1 1.414 0l7.557 7.83a.974.974 0 0 0 1.413 0"
+        fill-rule="evenodd">
+      </path>
+    </svg>
+  </button>
+
+  <!-- custom Script -->
+  <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>

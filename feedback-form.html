@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forgot Password</title>
+
+    <!-- Date Piker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+
+  <!--custom style css -->
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <link rel="preload" href="assets/fonts/kaushan-script/kaushan-script-v18-latin-regular.woff2" as="font"
+    type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/kaushan-script/kaushan-script-v18-latin-regular.ttf" as="font" type="font/ttf"
+    crossorigin />
+
+  <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-regular.woff2" as="font" type="font/woff2"
+    crossorigin />
+  <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-regular.ttf" as="font" type="font/ttf" crossorigin />
+
+  <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-500.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-500.ttf" as="font" type="font/ttf" crossorigin />
+
+  <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-600.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-600.ttf" as="font" type="font/ttf" crossorigin />
+
+  <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-700.ttf" as="font" type="font/ttf" crossorigin />
+
+  <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-800.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-800.ttf" as="font" type="font/ttf" crossorigin />
+
+  <style>
+    @font-face {
+      font-display: swap;
+      font-family: 'Kaushan Script';
+      font-style: normal;
+      font-weight: 400;
+      src: url('assets/fonts/kaushan-script/kaushan-script-v18-latin-regular.woff2') format('woff2'),
+        url('assets/fonts/kaushan-script/kaushan-script-v18-latin-regular.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-display: swap;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 400;
+      src: url('assets/fonts/poppins/poppins-v21-latin-regular.woff2') format('woff2'),
+        url('assets/fonts/poppins/poppins-v21-latin-regular.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-display: swap;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 500;
+      src: url('assets/fonts/poppins/poppins-v21-latin-500.woff2') format('woff2'),
+        url('assets/fonts/poppins/poppins-v21-latin-500.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-display: swap;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      src: url('assets/fonts/poppins/poppins-v21-latin-600.woff2') format('woff2'),
+        url('assets/fonts/poppins/poppins-v21-latin-600.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-display: swap;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 700;
+      src: url('assets/fonts/poppins/poppins-v21-latin-700.woff2') format('woff2'),
+        url('assets/fonts/poppins/poppins-v21-latin-700.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-display: swap;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 800;
+      src: url('assets/fonts/poppins/poppins-v21-latin-800.woff2') format('woff2'),
+        url('assets/fonts/poppins/poppins-v21-latin-800.ttf') format('truetype');
+    }
+  </style>
+
+  <style>
+    .rate {
+    padding: 0 10px;
+    margin-top: 0px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+  </style>
+
+</head>
+
+<body class="bg-light">
+
+   <!--  Navigation ============ Start =====  -->
+   <header>
+    <div class="container">
+        <a href="index.html" class="mg-logo">
+            <img src="assets/images/logo.svg" alt="managetrix-logo" class="img-fluid" />
+        </a>
+        <div class="menu-container">
+            <nav class="leftmenu">
+                <ul>
+                    <li class="d-block d-lg-none"><a href="login.html">Login</a></li>
+                    <li><a href="about-us.html">About us</a></li>
+
+                    <li class="dropdown">
+                        <a href="#">Our Destinations</a>
+                        <ul>
+                            <li><a href="faq.html">faq</a></li>
+                            <li><a href="country.html">Country</a></li>
+                            <li><a href="review.html">review</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="tour-single.html">Tour single Page</a></li>
+                            <li><a href="feedback-form.html">Feedback form</a></li>
+                            <li><a href="confirmation.html">confirmation</a></li>
+                            <li><a href="term-condition.html">Term Condition</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact us</a></li>
+
+                    <svg class="cancel-btn" fill="#000" xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 384 512">
+                        <path
+                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                        ></path>
+                    </svg>
+                </ul>
+            </nav>
+
+            <ul class="rightmenu">
+                <li class="dropdown hoho-btn account">
+                    <a href="#" class="d-flex align-items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" width="20" height="20" fill="#fff">
+                            <path
+                                d="M11.689 11.256a3.75 3.75 0 0 0-3.252-1.881H6.562a3.75 3.75 0 0 0-3.252 1.881c1.031 1.149 2.526 1.869 4.189 1.869s3.158-.723 4.189-1.869M0 7.5a7.5 7.5 0 1 1 15 0 7.5 7.5 0 1 1-15 0m7.5.469a2.109 2.109 0 1 0 0-4.219 2.109 2.109 0 1 0 0 4.219"
+                            ></path>
+                        </svg>
+                        <span class="d-lg-block d-none">Login or Create Account</span>
+                    </a>
+                    <ul>
+                        <li><a class="dropdown-item" href="login.html">login</a></li>
+                        <li><a class="dropdown-item" href="register.html">Register</a></li>
+                        <li><a class="dropdown-item" href="forgot-password.html">Forgot Password</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown hoho-btn">
+                    <a href="#">INR (₹)</a>
+                    <ul>
+                        <li><a href="#">CAD ($)</a></li>
+                        <li><a href="#">CAD ($)</a></li>
+                        <li><a href="#">CAD ($)</a></li>
+                        <li><a href="#">CAD ($)</a></li>
+                    </ul>
+                </li>
+                <li class="cart" id="cart-btn">
+                    <a href="javascript:void(0)">
+                        <img src="assets/images/cart.svg" alt="cart-img" />
+                        <span class="position-absolute start-lg-100 text-white ratio ratio-1x text-center translate-middle p-2 bg-theme rounded-circle">
+                            10
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <div class="menu-toggle-btn">
+                <svg fill="#000" width="20" height="20" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM64 256c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                    ></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- cart offcanvas menu -->
+<div class="offcanvas">
+    <div class="offcanvas-header">
+        <div class="d-flex align-items-center justify-content-between">
+            <div class="h6 mb-0">Cart (2 items)</div>
+            <svg class="cancel-canvas-btn" fill="#000" xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 384 512">
+                <path
+                    d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                ></path>
+            </svg>
+        </div>
+    </div>
+
+    <div class="offcanvas-body hoho-scroll">
+        <div class="cart-item-list">
+            <div class="row store-item bottom-line">
+                <div class="col-12 mb-4 gap-3 d-flex align-items-center justify-content-between">
+                    <a href="#"><img class="image-store col-5" src="assets/images/767.webp" alt="Blue Hoodie" /></a>
+
+                    <a href="#" class="h6 mb-0 col-7">TooTBus: Paris Hop-On, Hop-Off Bus Tour Ca ital of Games</a>
+                </div>
+                <div class="col-4 list-store mb-2">
+                    <p>Adult (+ 16)</p>
+                    <div class="btn-quantity-container d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn-quantity btn btn-default">−</button>
+                        <span class="p-quantity">0</span>
+                        <button type="button" class="btn-quantity btn btn-default">+</button>
+                    </div>
+                </div>
+                <div class="col-4 list-store mb-2">
+                    <p>Child (5 -15)</p>
+                    <div class="btn-quantity-container d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn-quantity btn btn-default">−</button>
+                        <span class="p-quantity">0</span>
+                        <button type="button" class="btn-quantity btn btn-default">+</button>
+                    </div>
+                </div>
+                <div class="col-4 list-store mb-2">
+                    <p>Infant (0-4)</p>
+                    <div class="btn-quantity-container d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn-quantity btn btn-default">−</button>
+                        <span class="p-quantity">0</span>
+                        <button type="button" class="btn-quantity btn btn-default">+</button>
+                    </div>
+                </div>
+                <div class="col-12 mt-2 list-store d-flex align-items-center justify-content-between">
+                    <button type="button" class="btn btn-sm remove">Remove Item</button>
+                    <div class="fs-6 fw-bold">₹45,646</div>
+                </div>
+            </div>
+            <div class="row mt-2 store-item bottom-line pb-3">
+                <div class="col-12 mb-4 gap-3 d-flex align-items-center justify-content-between">
+                    <a href="#"><img class="image-store col-5" src="assets/images/776.webp" alt="Blue Hoodie" /></a>
+
+                    <a href="#" class="h6 mb-0 col-7">TooTBus: Paris Hop-On, Hop-Off Bus Tour Ca ital of Games</a>
+                </div>
+                <div class="col-4 list-store mb-2">
+                    <p>Adult (+ 16)</p>
+                    <div class="btn-quantity-container d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn-quantity btn btn-default">−</button>
+                        <span class="p-quantity">0</span>
+                        <button type="button" class="btn-quantity btn btn-default">+</button>
+                    </div>
+                </div>
+                <div class="col-4 list-store mb-2">
+                    <p>Child (5 -15)</p>
+                    <div class="btn-quantity-container d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn-quantity btn btn-default">−</button>
+                        <span class="p-quantity">0</span>
+                        <button type="button" class="btn-quantity btn btn-default">+</button>
+                    </div>
+                </div>
+                <div class="col-4 list-store mb-2">
+                    <p>Infant (0-4)</p>
+                    <div class="btn-quantity-container d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn-quantity btn btn-default">−</button>
+                        <span class="p-quantity">0</span>
+                        <button type="button" class="btn-quantity btn btn-default">+</button>
+                    </div>
+                </div>
+                <div class="col-12 mt-2 list-store d-flex align-items-center justify-content-between">
+                    <button type="button" class="btn btn-sm remove">Remove Item</button>
+                    <div class="fs-6 fw-bold">₹45,646</div>
+                </div>
+            </div>
+            <div class="row mt-2 store-item bottom-line pb-3">
+                <div class="col-12 mb-4 gap-3 d-flex align-items-center justify-content-between">
+                    <a href="#"><img class="image-store col-5" src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/e2/fe/13.jpg" alt="Blue Hoodie" /></a>
+
+                    <a href="#" class="h6 mb-0 col-7">TooTBus: Paris Hop-On, Hop-Off Bus Tour Ca ital of Games</a>
+                </div>
+                <div class="col-4 list-store mb-2">
+                    <p>Adult (+ 16)</p>
+                    <div class="btn-quantity-container d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn-quantity btn btn-default">−</button>
+                        <span class="p-quantity">0</span>
+                        <button type="button" class="btn-quantity btn btn-default">+</button>
+                    </div>
+                </div>
+                <div class="col-4 list-store mb-2">
+                    <p>Child (5 -15)</p>
+                    <div class="btn-quantity-container d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn-quantity btn btn-default">−</button>
+                        <span class="p-quantity">0</span>
+                        <button type="button" class="btn-quantity btn btn-default">+</button>
+                    </div>
+                </div>
+                <div class="col-4 list-store mb-2">
+                    <p>Infant (0-4)</p>
+                    <div class="btn-quantity-container d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn-quantity btn btn-default">−</button>
+                        <span class="p-quantity">0</span>
+                        <button type="button" class="btn-quantity btn btn-default">+</button>
+                    </div>
+                </div>
+                <div class="col-12 mt-2 list-store d-flex align-items-center justify-content-between">
+                    <button type="button" class="btn btn-sm remove">Remove Item</button>
+                    <div class="fs-6 fw-bold">₹45,646</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas-footer">
+        <div class="list-store d-flex align-items-center justify-content-between">
+            <a href="checkout.html" class="hoho-btn">Checkout</a>
+            <div class="fs-5 fw-bold">₹45,646</div>
+        </div>
+    </div>
+</div>
+
+  <main class="tour-single-page bg-white pb-70">
+
+    <div class="page-header bg-white">
+      <div class="container">
+        <!-- Breadcrums -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Country Page</li>
+          </ol>
+        </nav>
+        <div class="h2 text-muted">Feedback Form</div>
+      </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="check-availabilty-form">
+                    <div class="h4 mb-lg-0">Feedback Section</div>
+                    <p>We would appreciate it if you could take a moment to give us your feedback on our services.</p>
+                    <form action="#" class="d-flex align-items-start flex-column gap-3 mb-4">
+                        <div class="row gy-2">
+                            <!-- <div class="col-lg-6">
+                                <label for="f-name" class="h6">First Name</label>
+                              <div class="input-group flex-nowrap gap-3 align-items-center">
+                                <input type="text" class="form-control" id="f-name" placeholder="Your First">
+                              </div>
+                            </div> -->
+                            <!-- <div class="col-lg-6">
+                                <label for="f-lastname" class="h6">last Name</label>
+                              <div class="input-group flex-nowrap gap-3 align-items-center">
+                                <input type="text" class="form-control" id="f-lastname" placeholder="Your Last">
+                              </div>
+                            </div> -->
+                             <!-- <div class="col-lg-6">
+                                <label for="f-tel" class="h6">Phone Number</label>
+                              <div class="input-group flex-nowrap gap-3 align-items-center">
+                                <input type="tel" placeholder="Phone Number(optional)" name="f-tel" class="form-control">
+                              </div>
+                            </div> -->
+                            <!-- <div class="col-lg-6">
+                                <label for="f-email" class="h6">Email ID</label>
+                              <div class="input-group flex-nowrap gap-3 align-items-center">
+                                <input type="email" name="f-email" class="form-control" placeholder="Email Id">
+                              </div>
+                            </div> -->
+                           
+                            <!-- <div class="col-12">
+                                <label for="f-email" class="h6">Overall, how satisfied are you with our services?</label>
+                                <div class="radio-btn">
+
+                                          <label class="radio-button">
+                                            <input type="radio" name="option" value="option2" />
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="12" r="9.5" stroke="#222222" stroke-linecap="round"></circle> <path d="M8.20857 16.622C8.63044 16.2567 9.20751 15.9763 9.86133 15.7876C10.5191 15.5977 11.256 15.5 12 15.5C12.744 15.5 13.4809 15.5977 14.1387 15.7876C14.7925 15.9763 15.3696 16.2567 15.7914 16.622" stroke="#222222" stroke-linecap="round"></path> <circle cx="9" cy="10" r="1" fill="#222222" stroke="#222222" stroke-linecap="round"></circle> <circle cx="15" cy="10" r="1" fill="#222222" stroke="#222222" stroke-linecap="round"></circle> </g></svg>
+                                          </label>
+
+                                          <label class="radio-button">
+                                            <input type="radio" name="option" value="option2" />
+                                            <svg fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Face_Meh" data-name="Face Meh"> <g> <path d="M12,21.942A9.942,9.942,0,1,1,21.942,12,9.953,9.953,0,0,1,12,21.942ZM12,3.058A8.942,8.942,0,1,0,20.942,12,8.952,8.952,0,0,0,12,3.058Z"></path> <circle cx="9.001" cy="8.99" r="1.25"></circle> <circle cx="15.001" cy="8.99" r="1.25"></circle> <path d="M8.438,15.939h7.125a.5.5,0,0,0,0-1H8.438a.5.5,0,0,0,0,1Z"></path> </g> </g> </g></svg>
+                                          </label>
+                                          
+                                          <label class="radio-button">
+                                            <input type="radio" name="option" value="option2" />
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="12" r="9.5" stroke="#222222" stroke-linecap="round"></circle> <path d="M9.83494 13.25C10.0544 13.63 10.37 13.9456 10.75 14.1651C11.13 14.3845 11.5612 14.5 12 14.5C12.4388 14.5 12.87 14.3845 13.25 14.1651C13.63 13.9456 13.9456 13.63 14.1651 13.25" stroke="#222222" stroke-linecap="round"></path> <rect x="7" y="8" width="3" height="2" rx="1" fill="#222222"></rect> <rect x="14" y="8" width="3" height="2" rx="1" fill="#222222"></rect> </g></svg>
+                                          </label>
+                                          
+                                          <label class="radio-button">
+                                            <input type="radio" name="option" value="option2" />
+                                            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5547 19.5718C17.2188 19.3478 16.7812 19.3478 16.4453 19.5718L14.5547 20.8322C14.0952 21.1385 13.4743 21.0143 13.1679 20.5548C12.8616 20.0953 12.9858 19.4744 13.4453 19.1681L15.3359 17.9077C16.3436 17.2359 17.6564 17.2359 18.6641 17.9077L20.5547 19.1681C21.0142 19.4744 21.1384 20.0953 20.832 20.5548C20.5257 21.0143 19.9048 21.1385 19.4453 20.8322L17.5547 19.5718Z" fill="#333333"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M31.5547 19.5718C31.2188 19.3478 30.7812 19.3478 30.4453 19.5718L28.5547 20.8322C28.0952 21.1385 27.4743 21.0143 27.1679 20.5548C26.8616 20.0953 26.9858 19.4744 27.4453 19.1681L29.3359 17.9077C30.3436 17.2359 31.6564 17.2359 32.6641 17.9077L34.5547 19.1681C35.0142 19.4744 35.1384 20.0953 34.832 20.5548C34.5257 21.0143 33.9048 21.1385 33.4453 20.8322L31.5547 19.5718Z" fill="#333333"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M14.1464 27.4791C14.328 27.1815 14.6514 27 15 27H33C33.3486 27 33.672 27.1815 33.8536 27.4791C34.0352 27.7767 34.0487 28.1473 33.8893 28.4573C33.8763 28.4825 33.8632 28.5081 33.8499 28.534C32.6705 30.8287 30.0128 36 24 36C17.9872 36 15.3295 30.8287 14.1501 28.534C14.1368 28.5081 14.1237 28.4825 14.1107 28.4573C13.9513 28.1473 13.9648 27.7767 14.1464 27.4791ZM16.6742 29C18.0055 31.3031 20.1463 34 24 34C27.8537 34 29.9945 31.3031 31.3258 29H16.6742Z" fill="#333333"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M24 42C33.9411 42 42 33.9411 42 24C42 14.0589 33.9411 6 24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42ZM24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" fill="#333333"></path> </g></svg>
+                                          </label>
+                                            
+                                        </div>
+                                    </label>
+                                </div> -->
+                                <!-- <div class="col-lg-12">
+                                    <label for="f-email" class="h6">Did our product meet your expectations?</label>
+                                  <div class="expectations-field">
+                                      <label for="Expectations">
+                                        <input type="radio" name="Expectations" id=""><span>Exceeded Expectations</span>
+                                    </label>
+                                    <label for="Expectations">
+                                        <input type="radio" name="Expectations" id="">Exceeded Expectations
+                                    </label>
+                                    <label for="Expectations">
+                                        <input type="radio" name="Expectations" id="">Exceeded Expectations
+                                    </label>
+                                    <label for="Expectations">
+                                        <input type="radio" name="Expectations" id="">Exceeded Expectations
+                                    </label>
+                                  </div>
+                                </div> -->
+                            
+                                <div class="rate">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="text">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="text">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="text">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="text">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="text">1 star</label>
+                                </div>
+                            
+                              </div>
+                            <div class="col-12">
+                              <textarea name="" class="form-control" id="" rows="6" cols="100" placeholder="Please share your experience or suggestions with us."></textarea>
+                            </div>
+                            <div class="col-12">
+                              <button type="submit" class="hoho-btn d-flex align-items-center gap-2">Submit<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M.901 2.135v-.817c0-.347.28-.627.625-.625L8.683.692c.346 0 .625.28.624.624v7.159a.623.623 0 0 1-.625.625h-.817a.625.625 0 0 1-.625-.639l.105-4.333L2.053 9.42a.625.625 0 0 1-.884 0L.58 8.832a.625.625 0 0 1 0-.883l5.292-5.293-4.333.105A.62.62 0 0 1 .9 2.137" fill="#fff"></path>
+                                </svg></button>
+                            </div>
+                          </div>
+                    </form>
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+
+  </main>
+
+  <!-- footer Start -->
+  <footer>
+    <div class="container">
+        <div class="row row-gap">
+            <div class="col-lg-3 col-md-6">
+                <div class="h5">Top Bus Tours</div>
+                <ul class="list-unstyled">
+                    <li> <a href="#">Athens Hop On Hop Off</a></li>
+                    <li> <a href="#">Madrid Hop On Hop Off</a></li>
+                    <li> <a href="#">Barcelona Hop On Hop Off</a></li>
+                    <li> <a href="#">London Hop On Hop Off</a></li>
+                    <li> <a href="#">Paris Hop On Hop Off</a></li>
+                    <li> <a href="#">Vienna Hop On Hop Off</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="h5">Our Company</div>
+                <ul class="list-unstyled">
+                    <li> <a href="about-us.html">About Us</a></li>
+                    <li> <a href="blog.html">Blog</a></li>
+                    <li> <a href="#">Privacy Policy</a></li>
+                    <li> <a href="term-condition.html">Terms and Conditions</a></li>
+                    <li> <a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="h5">Support</div>
+                <ul class="list-unstyled">
+                    <li> <a href="contact.html">Contact Us</a></li>
+                    <li> <a href="faq.html">Frequently Asked Questions</a></li>
+                    <li> <a href="#">Privacy Policy</a></li>
+                    <li> <a href="term-condition.html">Terms of Use</a></li>
+                    <li> <a href="review.html">Review</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <a href="#" class="d-flex align-items-center mb-4">
+                    <div class="img">
+                        <img src="assets/images/live.svg" alt="">
+                    </div>
+                    <div class="content ms-3">
+                        <span class="d-block text-dark">Live Support?</span>
+                        <strong class="d-block text-dark">Live Chat</strong>
+                    </div>
+
+                </a>
+
+                <span class="d-block">E-mail support?</span>
+                <a href="mailto:support@sightseeingo.com" class="text-dark fw-bold">support@sightseeingo.com</a>
+            </div>
+            <div class="col-lg-3 col-md-12 text-lg-start  text-center">
+                <a class="footer-logo" href="#">
+                    <img src="assets/images/logo.svg" alt="Hop off Hop On logo" class="img-fluid ">
+                </a>
+            </div>
+
+            <div class="col-lg-9 col-md-12">
+                <div class="footer-form rounded d-lg-flex justify-content-betwwen align-items-center">
+                    <span class="d-block mb-lg-0 mb-3 fw-bold fs-5">SUBSCRIBE FOR UPDATES &amp; LATEST OFFERS</span>
+                    <form action="#" class="d-flex ps-3 ms-lg-auto">
+                        <input type="text" placeholder="Your Email" class="border-0 form-control w-100">
+                        <button class="btn hoho-btn ms-auto rounded">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+  <div class="copywrite text-center py-3">
+    &copy; 2024 Hop On Hop Off Bus Tours. All rights reserved.
+  </div>
+  <!-- footer End -->
+
+  <button title="back to top button" id="scroll_to_top" class="">
+    <svg width="16" fill="#fff" viewBox="0 -4.5 20 20" xmlns="http://www.w3.org/2000/svg">
+      <g stroke-width="0"></g>
+      <g stroke-linecap="round" stroke-linejoin="round"></g>
+      <path
+        d="M19.708 10.634c.39-.405.39-1.06 0-1.464L11.444.607a1.95 1.95 0 0 0-2.827 0L.292 9.232c-.385.4-.39 1.048-.01 1.454a.976.976 0 0 0 1.425.01l7.617-7.893a.975.975 0 0 1 1.414 0l7.557 7.83a.974.974 0 0 0 1.413 0"
+        fill-rule="evenodd">
+      </path>
+    </svg>
+  </button>
+
+  <!-- custom Script -->
+  <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
